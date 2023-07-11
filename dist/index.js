@@ -35,7 +35,7 @@ const del = () => {
     }
 };
 const render = () => {
-    console.log(state);
+    // console.log(state);
     if (resultsElement) {
         if (Number(state.firstNumber) > 99999999) {
             resultsElement.innerText = "ERROR";
