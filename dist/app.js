@@ -23,10 +23,7 @@ const equalButton = document.querySelector("#button-equal");
 const operationElement = document.querySelector(".operation");
 const resultsElement = document.querySelector(".result");
 const deleteButton = document.querySelector("#button-del");
-const render = (myState) => {
-    if (myState) {
-        state = Object.assign({}, myState);
-    }
+const render = () => {
     if (resultsElement) {
         if (Number(state.firstNumber) > 99999999) {
             resultsElement.innerText = "ERROR";
