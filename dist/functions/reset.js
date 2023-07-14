@@ -1,8 +1,29 @@
-export const reset = (button, myFunction, myState) => {
+export const reset = (button, render, state) => {
     if (button) {
         button.addEventListener("click", () => {
-            myState = Object.assign(Object.assign({}, myState), { output: "0", firstNumber: "", secondNumber: "", operation: "", equalOperation: "", status: false, isEqualed: false, clearSecondNumber: false, canDelete: true, disabled: false });
-            myFunction(myState);
+            state.output = "0";
+            state.firstNumber = "";
+            state.secondNumber = "";
+            state.operation = "";
+            state.equalOperation = "";
+            state.status = false;
+            state.isEqualed = false;
+            state.clearSecondNumber = false;
+            state.canDelete = true;
+            state.disabled = false;
+            render();
         });
     }
 };
+// state = {
+//   output: "0",
+//   firstNumber: "",
+//   secondNumber: "",
+//   operation: "",
+//   equalOperation: "",
+//   status: false,
+//   isEqualed: false,
+//   clearSecondNumber: false,
+//   canDelete: true,
+//   disabled: false,
+// };

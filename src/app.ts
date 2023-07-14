@@ -35,12 +35,7 @@ const resultsElement: HTMLElement | null = document.querySelector(".result");
 const deleteButton: HTMLButtonElement | null =
   document.querySelector("#button-del");
 
-const render = (myState?: State) => {
-  if (myState) {
-    state = {
-      ...myState,
-    };
-  }
+const render = () => {
   if (resultsElement) {
     if (Number(state.firstNumber) > 99999999) {
       resultsElement.innerText = "ERROR";
