@@ -1,6 +1,19 @@
 :root {
   touch-action: pan-x pan-y;
   height: 100%;
+  --background-color: #3d4a83;
+  --background-result-color: #192041;
+  --background-buttons-color: #262e57;
+  --numbers-button-background-color: #ffffff;
+  --numbers-button-text-color: #39447c;
+  --numbers-button-border-color: #bebebe;
+  --equal-button-background-color: #d33c3c;
+  --equal-button-text-color: #ffffff;
+  --equal-button-border-color: #ac3131;
+  --rest-button-background-color: #39447c;
+  --rest-button-text-color: #ffffff;
+  --rest-button-border-color: #2d355f;
+  --text-color: #ffffff;
 }
 
 * {
@@ -10,32 +23,84 @@
 }
 
 body {
+  transition: 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: #3d4a83;
+  gap: 1rem;
+  background-color: var(--background-color);
+  padding: 0.5rem;
+  margin: 0 auto;
+  max-width: 400px;
 }
 body header {
   margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 body header h1 {
-  color: white;
-  text-align: center;
-  letter-spacing: 0.4rem;
+  color: var(--text-color);
+  text-align: left;
+  letter-spacing: 0.3rem;
+}
+body header .theme {
+  display: flex;
+  flex-direction: column;
+  width: 4.5rem;
+}
+body header .theme .numbers {
+  display: flex;
+  color: var(--text-color);
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+body header .theme .numbers p {
+  cursor: pointer;
+}
+body header .theme .box {
+  background-color: var(--background-buttons-color);
+  border-radius: 2rem;
+  height: 1.5rem;
+  position: relative;
+}
+body header .theme .box .circle {
+  transition: 0.5s;
+  position: absolute;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  background-color: var(--equal-button-background-color);
+  top: 0.1rem;
+  left: 0.1rem;
+}
+body header .theme .box .box-theme {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+body header .theme .box .first-theme {
+  left: 0;
+}
+body header .theme .box .second-theme {
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+body header .theme .box .third-theme {
+  right: 0;
 }
 body main section {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 400px;
   gap: 2rem;
 }
 body main section .background-result {
   display: flex;
-  background-color: #192041;
+  background-color: var(--background-result-color);
   border-radius: 0.5rem;
   font-size: 3rem;
-  color: white;
+  color: var(--text-color);
   padding: 0 1.5rem;
 }
 body main section .background-result .operation {
@@ -49,8 +114,8 @@ body main section .background-result .result {
 body main section .background-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  background-color: #262e57;
+  gap: 1rem;
+  background-color: var(--background-buttons-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
@@ -58,29 +123,30 @@ body main section .background-buttons .button {
   font-size: 2rem;
   border-radius: 0.5rem;
   border: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid;
   transition: 0.3s;
 }
 body main section .background-buttons .button:hover {
   cursor: pointer;
 }
 body main section .background-buttons .button-white {
-  color: #39447c;
-  border-bottom-color: rgb(177, 177, 177);
+  background-color: var(--numbers-button-background-color);
+  color: var(--numbers-button-text-color);
+  border-bottom-color: var(--numbers-button-border-color);
 }
 body main section .background-buttons .button-blue {
-  background-color: #39447c;
-  color: white;
-  border-bottom-color: #2d355f;
+  background-color: var(--rest-button-background-color);
+  color: var(--rest-button-text-color);
+  border-bottom-color: var(--rest-button-border-color);
 }
 body main section .background-buttons .button-del {
   font-size: 1.5rem;
 }
 body main section .background-buttons .button-red {
-  background-color: rgb(173, 48, 48);
-  color: white;
+  background-color: var(--equal-button-background-color);
+  color: var(--equal-button-text-color);
   grid-column: 3/5;
-  border-bottom-color: rgb(131, 34, 34);
+  border-bottom-color: var(--equal-button-border-color);
 }
 body main section .background-buttons .button-res {
   grid-column: 1/3;

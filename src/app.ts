@@ -5,6 +5,7 @@ import { generateNumbers } from "./functions/generateNumbers.js";
 import { equal } from "./functions/equal.js";
 import { operationButtonEvent } from "./functions/operationButtonEvent.js";
 import { equalButtonEvent } from "./functions/equalButtonEvent.js";
+import { themeButtons } from "./functions/themeButtons.js";
 
 let state: State = {
   output: "0",
@@ -19,21 +20,9 @@ let state: State = {
   disabled: false,
 };
 
-const numberButtons = document.querySelectorAll(
-  "#button-number"
-) as NodeListOf<HTMLButtonElement>;
-const resetButton: HTMLButtonElement | null =
-  document.querySelector("#button-res");
-const operationButtons = document.querySelectorAll(
-  "#button-operation"
-) as NodeListOf<HTMLButtonElement>;
-const equalButton: HTMLButtonElement | null =
-  document.querySelector("#button-equal");
 const operationElement: HTMLElement | null =
   document.querySelector(".operation");
 const resultsElement: HTMLElement | null = document.querySelector(".result");
-const deleteButton: HTMLButtonElement | null =
-  document.querySelector("#button-del");
 
 const render = () => {
   if (resultsElement) {
@@ -52,11 +41,12 @@ const render = () => {
 
 const init = () => {
   render();
-  generateNumbers(numberButtons, render, state);
-  reset(resetButton, render, state);
-  operationButtonEvent(operationButtons, state, render, equal);
-  equalButtonEvent(equalButton, state, render, equal);
-  del(deleteButton, render, state);
+  themeButtons();
+  generateNumbers(render, state);
+  reset(render, state);
+  operationButtonEvent(state, render, equal);
+  equalButtonEvent(state, render, equal);
+  del(render, state);
 };
 
 init();

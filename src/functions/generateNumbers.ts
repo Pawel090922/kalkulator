@@ -1,10 +1,10 @@
 import { State } from "../types/types";
 
-export const generateNumbers = (
-  numberButtons: NodeListOf<HTMLButtonElement>,
-  render: () => void,
-  state: State
-) => {
+const numberButtons = document.querySelectorAll(
+  "#button-number"
+) as NodeListOf<HTMLButtonElement>;
+
+export const generateNumbers = (render: () => void, state: State) => {
   numberButtons.forEach((button) => {
     button.addEventListener("click", () => {
       if (!state.disabled) {

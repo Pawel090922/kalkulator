@@ -1,10 +1,9 @@
 import { State } from "../types/types";
 
-export const del = (
-  deleteButton: HTMLButtonElement | null,
-  render: () => void,
-  state: State
-) => {
+const deleteButton: HTMLButtonElement | null =
+  document.querySelector("#button-del");
+
+export const del = (render: () => void, state: State) => {
   if (deleteButton) {
     deleteButton.addEventListener("click", () => {
       if (!state.disabled) {

@@ -1,4 +1,5 @@
-export const operationButtonEvent = (operationButtons, state, render, equal) => {
+const operationButtons = document.querySelectorAll("#button-operation");
+export const operationButtonEvent = (state, render, equal) => {
     operationButtons.forEach((button) => {
         button;
         button.addEventListener("click", () => {
