@@ -1,4 +1,5 @@
-export const equalButtonEvent = (equalButton, state, render, equal) => {
+const equalButton = document.querySelector("#button-equal");
+export const equalButtonEvent = (state, render, equal) => {
     if (equalButton) {
         equalButton.addEventListener("click", () => {
             if (!state.disabled) {

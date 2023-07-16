@@ -1,4 +1,5 @@
-export const del = (deleteButton, render, state) => {
+const deleteButton = document.querySelector("#button-del");
+export const del = (render, state) => {
     if (deleteButton) {
         deleteButton.addEventListener("click", () => {
             if (!state.disabled) {

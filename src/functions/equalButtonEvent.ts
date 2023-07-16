@@ -1,7 +1,9 @@
 import { State } from "../types/types";
 
+const equalButton: HTMLButtonElement | null =
+  document.querySelector("#button-equal");
+
 export const equalButtonEvent = (
-  equalButton: HTMLButtonElement | null,
   state: State,
   render: () => void,
   equal: (state: State) => void

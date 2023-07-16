@@ -1,12 +1,11 @@
 import { State } from "../types/types";
 
-export const reset = (
-  button: HTMLButtonElement | null,
-  render: () => void,
-  state: State
-) => {
-  if (button) {
-    button.addEventListener("click", () => {
+const resetButton: HTMLButtonElement | null =
+  document.querySelector("#button-res");
+
+export const reset = (render: () => void, state: State) => {
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
       state.output = "0";
       state.firstNumber = "";
       state.secondNumber = "";

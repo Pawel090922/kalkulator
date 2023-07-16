@@ -1,6 +1,7 @@
-export const reset = (button, render, state) => {
-    if (button) {
-        button.addEventListener("click", () => {
+const resetButton = document.querySelector("#button-res");
+export const reset = (render, state) => {
+    if (resetButton) {
+        resetButton.addEventListener("click", () => {
             state.output = "0";
             state.firstNumber = "";
             state.secondNumber = "";

@@ -4,6 +4,7 @@ import { generateNumbers } from "./functions/generateNumbers.js";
 import { equal } from "./functions/equal.js";
 import { operationButtonEvent } from "./functions/operationButtonEvent.js";
 import { equalButtonEvent } from "./functions/equalButtonEvent.js";
+import { themeButtons } from "./functions/themeButtons.js";
 let state = {
     output: "0",
     firstNumber: "",
@@ -16,13 +17,8 @@ let state = {
     canDelete: true,
     disabled: false,
 };
-const numberButtons = document.querySelectorAll("#button-number");
-const resetButton = document.querySelector("#button-res");
-const operationButtons = document.querySelectorAll("#button-operation");
-const equalButton = document.querySelector("#button-equal");
 const operationElement = document.querySelector(".operation");
 const resultsElement = document.querySelector(".result");
-const deleteButton = document.querySelector("#button-del");
 const render = () => {
     if (resultsElement) {
         if (Number(state.firstNumber) > 99999999) {
@@ -40,10 +36,11 @@ const render = () => {
 };
 const init = () => {
     render();
-    generateNumbers(numberButtons, render, state);
-    reset(resetButton, render, state);
-    operationButtonEvent(operationButtons, state, render, equal);
-    equalButtonEvent(equalButton, state, render, equal);
-    del(deleteButton, render, state);
+    themeButtons();
+    generateNumbers(render, state);
+    reset(render, state);
+    operationButtonEvent(state, render, equal);
+    equalButtonEvent(state, render, equal);
+    del(render, state);
 };
 init();

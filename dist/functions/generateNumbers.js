@@ -1,4 +1,5 @@
-export const generateNumbers = (numberButtons, render, state) => {
+const numberButtons = document.querySelectorAll("#button-number");
+export const generateNumbers = (render, state) => {
     numberButtons.forEach((button) => {
         button.addEventListener("click", () => {
             if (!state.disabled) {
