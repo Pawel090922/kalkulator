@@ -19,7 +19,7 @@ let state: State = {
   canDelete: true,
   disabled: false,
 };
-
+//wszystko git
 const operationElement: HTMLElement | null =
   document.querySelector(".operation");
 const resultsElement: HTMLElement | null = document.querySelector(".result");
