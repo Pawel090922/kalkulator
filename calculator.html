@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="dist/styles/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Kalkulator</h1>
+      <div class="theme">
+        <div class="numbers">
+          <p data-first-theme>1</p>
+          <p data-second-theme>2</p>
+          <p data-third-theme>3</p>
+        </div>
+        <div class="box">
+          <div class="circle"></div>
+          <div class="box-theme first-theme" data-first-theme></div>
+          <div class="box-theme second-theme" data-second-theme></div>
+          <div class="box-theme third-theme" data-third-theme></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="background-result">
+          <div class="operation"></div>
+          <div class="result"></div>
+        </div>
+        <div class="background-buttons">
+          <!-- data-... -->
+          <button class="button button-white" data-button-number>7</button>
+          <button class="button button-white" data-button-number>8</button>
+          <button class="button button-white" data-button-number>9</button>
+          <button class="button button-blue button-del" data-button-del>
+            DEL
+          </button>
+          <button class="button button-white" data-button-number>4</button>
+          <button class="button button-white" data-button-number>5</button>
+          <button class="button button-white" data-button-number>6</button>
+          <button class="button button-white" data-button-operation>+</button>
+          <button class="button button-white" data-button-number>1</button>
+          <button class="button button-white" data-button-number>2</button>
+          <button class="button button-white" data-button-number>3</button>
+          <button class="button button-white" data-button-operation>-</button>
+          <button class="button button-white" data-button-number>.</button>
+          <button class="button button-white" data-button-number>0</button>
+          <button class="button button-white" data-button-operation>/</button>
+          <button class="button button-white" data-button-operation>*</button>
+          <button class="button button-blue button-res" data-button-res>
+            RESET
+          </button>
+          <button class="button button-red" data-button-equal>=</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="dist/calc.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-const equalButton = document.querySelector("#button-equal");
+const equalButton = document.querySelector("[data-button-equal]");
 export const equalButtonEvent = (state, render, equal) => {
     if (equalButton) {
         equalButton.addEventListener("click", () => {

@@ -1,7 +1,7 @@
 import { State } from "../types/types";
 
 const operationButtons = document.querySelectorAll(
-  "#button-operation"
+  "[data-button-operation]"
 ) as NodeListOf<HTMLButtonElement>;
 
 export const operationButtonEvent = (

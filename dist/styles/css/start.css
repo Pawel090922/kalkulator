@@ -1,0 +1,18 @@
+:root {
+  touch-action: pan-x pan-y;
+  height: 100%;
+  --background-color: #3d4a83;
+  --background-navbar-color: #262e57;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+} 
+
+/*# sourceMappingURL=start.css.map */

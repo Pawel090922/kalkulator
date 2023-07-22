@@ -1,7 +1,7 @@
 import { State } from "../types/types";
 
 const resetButton: HTMLButtonElement | null =
-  document.querySelector("#button-res");
+  document.querySelector("[data-button-res]");
 
 export const reset = (render: () => void, state: State) => {
   if (resetButton) {

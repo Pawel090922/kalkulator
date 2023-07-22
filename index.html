@@ -3,68 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <title>Kalkulator</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/styles/css/start.css" />
+    <title>Strona Główna</title>
   </head>
   <body>
     <header>
-      <h1>Kalkulator</h1>
-      <div class="theme">
-        <div class="numbers">
-          <p id="first-theme">1</p>
-          <p id="second-theme">2</p>
-          <p id="third-theme">3</p>
-        </div>
-        <div class="box">
-          <div class="circle"></div>
-          <div class="box-theme first-theme" id="first-theme"></div>
-          <div class="box-theme second-theme" id="second-theme"></div>
-          <div class="box-theme third-theme" id="third-theme"></div>
-        </div>
-      </div>
+      <nav>
+        <p class="Home">Strona Główna</p>
+        <ul class="nav-links">
+          <li>
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-github"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=EDrOriKrV3g"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section>
-        <div class="background-result">
-          <div class="operation"></div>
-          <div class="result"></div>
-        </div>
-        <div class="background-buttons">
-          <button class="button button-white" id="button-number">7</button>
-          <button class="button button-white" id="button-number">8</button>
-          <button class="button button-white" id="button-number">9</button>
-          <button class="button button-blue button-del" id="button-del">
-            DEL
-          </button>
-          <button class="button button-white" id="button-number">4</button>
-          <button class="button button-white" id="button-number">5</button>
-          <button class="button button-white" id="button-number">6</button>
-          <button class="button button-white" id="button-operation">+</button>
-          <button class="button button-white" id="button-number">1</button>
-          <button class="button button-white" id="button-number">2</button>
-          <button class="button button-white" id="button-number">3</button>
-          <button class="button button-white" id="button-operation">-</button>
-          <button class="button button-white" id="button-number">.</button>
-          <button class="button button-white" id="button-number">0</button>
-          <button class="button button-white" id="button-operation">/</button>
-          <button class="button button-white" id="button-operation">*</button>
-          <button class="button button-blue button-res" id="button-res">
-            RESET
-          </button>
-          <button class="button button-red" id="button-equal">=</button>
-        </div>
-      </section>
-    </main>
-    <script type="module" src="dist/app.js"></script>
+    <!-- <a href="./calculator.html">Kalkulator</a> -->
   </body>
 </html>

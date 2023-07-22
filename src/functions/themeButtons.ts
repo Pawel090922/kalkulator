@@ -1,10 +1,10 @@
 import { setTheme } from "../helpers/setTheme.js";
 const firstThemeButton: NodeListOf<HTMLButtonElement> =
-  document.querySelectorAll("#first-theme");
+  document.querySelectorAll("[data-first-theme]");
 const secondThemeButton: NodeListOf<HTMLButtonElement> =
-  document.querySelectorAll("#second-theme");
+  document.querySelectorAll("[data-second-theme]");
 const thirdThemeButton: NodeListOf<HTMLButtonElement> =
-  document.querySelectorAll("#third-theme");
+  document.querySelectorAll("[data-third-theme]");
 const circle: HTMLElement | null = document.querySelector(".circle");
 export const themeButtons = () => {
   firstThemeButton.forEach((button) => {

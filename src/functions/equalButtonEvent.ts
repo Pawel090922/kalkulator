@@ -1,7 +1,8 @@
 import { State } from "../types/types";
 
-const equalButton: HTMLButtonElement | null =
-  document.querySelector("#button-equal");
+const equalButton: HTMLButtonElement | null = document.querySelector(
+  "[data-button-equal]"
+);
 
 export const equalButtonEvent = (
   state: State,

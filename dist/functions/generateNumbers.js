@@ -1,4 +1,4 @@
-const numberButtons = document.querySelectorAll("#button-number");
+const numberButtons = document.querySelectorAll("[data-button-number]");
 export const generateNumbers = (render, state) => {
     numberButtons.forEach((button) => {
         button.addEventListener("click", () => {

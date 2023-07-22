@@ -1,7 +1,7 @@
 import { State } from "../types/types";
 
 const numberButtons = document.querySelectorAll(
-  "#button-number"
+  "[data-button-number]"
 ) as NodeListOf<HTMLButtonElement>;
 
 export const generateNumbers = (render: () => void, state: State) => {

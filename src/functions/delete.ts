@@ -1,7 +1,7 @@
 import { State } from "../types/types";
 
 const deleteButton: HTMLButtonElement | null =
-  document.querySelector("#button-del");
+  document.querySelector("[data-button-del]");
 
 export const del = (render: () => void, state: State) => {
   if (deleteButton) {

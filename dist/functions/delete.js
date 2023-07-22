@@ -1,4 +1,4 @@
-const deleteButton = document.querySelector("#button-del");
+const deleteButton = document.querySelector("[data-button-del]");
 export const del = (render, state) => {
     if (deleteButton) {
         deleteButton.addEventListener("click", () => {

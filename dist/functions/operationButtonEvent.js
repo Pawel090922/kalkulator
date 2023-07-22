@@ -1,4 +1,4 @@
-const operationButtons = document.querySelectorAll("#button-operation");
+const operationButtons = document.querySelectorAll("[data-button-operation]");
 export const operationButtonEvent = (state, render, equal) => {
     operationButtons.forEach((button) => {
         button;

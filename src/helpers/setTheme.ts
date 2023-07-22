@@ -8,5 +8,7 @@ export const setTheme = (theme: Theme) => {
     const property = el as keyof Colors;
     root.style.setProperty(el, selectedTheme[property]);
   });
-  // root.style.setProperty("--background-color", "blue");
 };
+
+// localStorage.setItem
+// localStorage.getItem
