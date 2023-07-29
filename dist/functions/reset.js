@@ -1,4 +1,4 @@
-const resetButton = document.querySelector("#button-res");
+const resetButton = document.querySelector("[data-button-res]");
 export const reset = (render, state) => {
     if (resetButton) {
         resetButton.addEventListener("click", () => {
@@ -12,7 +12,7 @@ export const reset = (render, state) => {
             state.clearSecondNumber = false;
             state.canDelete = true;
             state.disabled = false;
-            render();
+            render(state);
         });
     }
 };

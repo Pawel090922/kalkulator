@@ -1,10 +1,13 @@
 import { State } from "../types/types";
 
 const numberButtons = document.querySelectorAll(
-  "#button-number"
+  "[data-button-number]"
 ) as NodeListOf<HTMLButtonElement>;
 
-export const generateNumbers = (render: () => void, state: State) => {
+export const generateNumbers = (
+  render: (state: State) => void,
+  state: State
+) => {
   numberButtons.forEach((button) => {
     button.addEventListener("click", () => {
       if (!state.disabled) {
@@ -42,7 +45,7 @@ export const generateNumbers = (render: () => void, state: State) => {
           state.secondNumber = state.output;
         }
         state.canDelete = true;
-        render();
+        render(state);
       }
     });
   });

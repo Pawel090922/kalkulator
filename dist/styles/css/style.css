@@ -14,6 +14,31 @@
   --rest-button-text-color: #ffffff;
   --rest-button-border-color: #2d355f;
   --text-color: #ffffff;
+  --button-horizontal-position: 0.2rem;
+  --transition: none;
+  --arrow-background-color: #192041;
+}
+
+.transition {
+  --transition: 0.3s;
+}
+
+.light-mode {
+  --background-color: #cccccc;
+  --background-result-color: #ffffff;
+  --background-buttons-color: #aaaaaa;
+  --numbers-button-background-color: #eeeeee;
+  --numbers-button-text-color: #222222;
+  --numbers-button-border-color: #bbbbbb;
+  --equal-button-background-color: #ff6000;
+  --equal-button-text-color: #ffffff;
+  --equal-button-border-color: #b34700;
+  --rest-button-background-color: #009999;
+  --rest-button-text-color: #ffffff;
+  --rest-button-border-color: #006666;
+  --text-color: #222222;
+  --button-horizontal-position: calc(100% - 1.5rem);
+  --arrow-background-color: #aaaaaa;
 }
 
 * {
@@ -23,7 +48,7 @@
 }
 
 body {
-  transition: 0.3s;
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -36,7 +61,25 @@ body header {
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+}
+body header .box-buttons-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 50%;
+  color: var(--text-color);
+  background-color: var(--arrow-background-color);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+body header .box-buttons-arrow:hover {
+  cursor: pointer;
+  transform: scale(1.15);
 }
 body header h1 {
   color: var(--text-color);
@@ -46,49 +89,31 @@ body header h1 {
 body header .theme {
   display: flex;
   flex-direction: column;
-  width: 4.5rem;
-}
-body header .theme .numbers {
-  display: flex;
-  color: var(--text-color);
-  justify-content: space-around;
-  font-size: 1.2rem;
-}
-body header .theme .numbers p {
-  cursor: pointer;
+  width: 4rem;
 }
 body header .theme .box {
   background-color: var(--background-buttons-color);
   border-radius: 2rem;
   height: 1.5rem;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
 body header .theme .box .circle {
-  transition: 0.5s;
+  transition: var(--transition);
   position: absolute;
   height: 1.3rem;
   width: 1.3rem;
   border-radius: 50%;
   background-color: var(--equal-button-background-color);
   top: 0.1rem;
-  left: 0.1rem;
+  left: var(--button-horizontal-position);
 }
 body header .theme .box .box-theme {
   position: absolute;
   height: 1.5rem;
   width: 1.5rem;
   cursor: pointer;
-}
-body header .theme .box .first-theme {
-  left: 0;
-}
-body header .theme .box .second-theme {
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-body header .theme .box .third-theme {
-  right: 0;
 }
 body main section {
   display: flex;
@@ -124,7 +149,7 @@ body main section .background-buttons .button {
   border-radius: 0.5rem;
   border: none;
   border-bottom: 5px solid;
-  transition: 0.3s;
+  transition: var(--transition);
 }
 body main section .background-buttons .button:hover {
   cursor: pointer;
@@ -152,6 +177,8 @@ body main section .background-buttons .button-res {
   grid-column: 1/3;
 }
 body main section .background-buttons .button:active {
-  transition: 0.3s;
+  transition: var(--transition);
   border: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

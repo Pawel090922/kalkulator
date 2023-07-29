@@ -5,7 +5,8 @@ import { generateNumbers } from "./functions/generateNumbers.js";
 import { equal } from "./functions/equal.js";
 import { operationButtonEvent } from "./functions/operationButtonEvent.js";
 import { equalButtonEvent } from "./functions/equalButtonEvent.js";
-import { themeButtons } from "./functions/themeButtons.js";
+import { changeTheme } from "./functions/changeTheme.js";
+import { render } from "./functions/render.js";
 
 let state: State = {
   output: "0",
@@ -19,6 +20,8 @@ let state: State = {
   canDelete: true,
   disabled: false,
 };
+<<<<<<< HEAD:src/calc.ts
+=======
 //wszystko git
 const operationElement: HTMLElement | null =
   document.querySelector(".operation");
@@ -38,10 +41,11 @@ const render = () => {
     operationElement.innerText = state.operation;
   }
 };
+>>>>>>> master:src/app.ts
 
 const init = () => {
-  render();
-  themeButtons();
+  render(state);
+  changeTheme();
   generateNumbers(render, state);
   reset(render, state);
   operationButtonEvent(state, render, equal);

@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "sass": "^1.64.1",
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "sass": "sass --watch src/styles/scss:dist/styles/css"
   }
 }

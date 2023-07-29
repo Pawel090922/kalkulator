@@ -1,9 +1,9 @@
 import { State } from "../types/types";
 
 const deleteButton: HTMLButtonElement | null =
-  document.querySelector("#button-del");
+  document.querySelector("[data-button-del]");
 
-export const del = (render: () => void, state: State) => {
+export const del = (render: (state: State) => void, state: State) => {
   if (deleteButton) {
     deleteButton.addEventListener("click", () => {
       if (!state.disabled) {
@@ -14,7 +14,7 @@ export const del = (render: () => void, state: State) => {
             state.secondNumber = state.output;
           }
         }
-        render();
+        render(state);
       }
     });
   }

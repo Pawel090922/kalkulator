@@ -1,11 +1,12 @@
 import { State } from "../types/types";
 
-const equalButton: HTMLButtonElement | null =
-  document.querySelector("#button-equal");
+const equalButton: HTMLButtonElement | null = document.querySelector(
+  "[data-button-equal]"
+);
 
 export const equalButtonEvent = (
   state: State,
-  render: () => void,
+  render: (state: State) => void,
   equal: (state: State) => void
 ) => {
   if (equalButton) {
@@ -14,7 +15,7 @@ export const equalButtonEvent = (
         equal(state);
         state.isEqualed = true;
         state.clearSecondNumber = true;
-        render();
+        render(state);
       }
     });
   }
