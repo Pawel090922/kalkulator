@@ -4,7 +4,8 @@ import { generateNumbers } from "./functions/generateNumbers.js";
 import { equal } from "./functions/equal.js";
 import { operationButtonEvent } from "./functions/operationButtonEvent.js";
 import { equalButtonEvent } from "./functions/equalButtonEvent.js";
-import { themeButtons } from "./functions/themeButtons.js";
+import { changeTheme } from "./functions/changeTheme.js";
+import { render } from "./functions/render.js";
 let state = {
     output: "0",
     firstNumber: "",
@@ -17,26 +18,9 @@ let state = {
     canDelete: true,
     disabled: false,
 };
-const operationElement = document.querySelector(".operation");
-const resultsElement = document.querySelector(".result");
-const render = () => {
-    if (resultsElement) {
-        if (Number(state.firstNumber) > 99999999) {
-            resultsElement.innerText = "ERROR";
-            state.disabled = true;
-        }
-        else {
-            state.output = state.output.slice(0, 8);
-            resultsElement.innerText = state.output;
-        }
-    }
-    if (operationElement) {
-        operationElement.innerText = state.operation;
-    }
-};
 const init = () => {
-    render();
-    themeButtons();
+    render(state);
+    changeTheme();
     generateNumbers(render, state);
     reset(render, state);
     operationButtonEvent(state, render, equal);

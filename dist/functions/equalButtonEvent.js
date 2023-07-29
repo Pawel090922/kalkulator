@@ -6,7 +6,7 @@ export const equalButtonEvent = (state, render, equal) => {
                 equal(state);
                 state.isEqualed = true;
                 state.clearSecondNumber = true;
-                render();
+                render(state);
             }
         });
     }

@@ -21,7 +21,7 @@ export const operationButtonEvent = (state, render, equal) => {
                     state.operation = button.innerText;
                 }
                 state.equalOperation = state.operation;
-                render();
+                render(state);
             }
         });
     });

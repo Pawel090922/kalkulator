@@ -6,7 +6,7 @@ const operationButtons = document.querySelectorAll(
 
 export const operationButtonEvent = (
   state: State,
-  render: () => void,
+  render: (state: State) => void,
   equal: (state: State) => void
 ) => {
   operationButtons.forEach((button) => {
@@ -29,7 +29,7 @@ export const operationButtonEvent = (
           state.operation = button.innerText;
         }
         state.equalOperation = state.operation;
-        render();
+        render(state);
       }
     });
   });

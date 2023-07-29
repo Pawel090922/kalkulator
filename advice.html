@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Advice generator app</title>
+    <link rel="stylesheet" href="dist/styles/css/advice.css" />
+  </head>
+  <body>
+    <main>
+      <div class="box-buttons">
+        <a class="box-buttons-arrow" href="./index.html">
+          <i class="bx bx-arrow-back"></i>
+        </a>
+        <div class="box-buttons-theme" data-button-change-theme>
+          <div class="box-buttons-theme-circle"></div>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-box-number">
+          <span>Advice</span>
+          <span data-id-advice></span>
+        </div>
+        <div class="content-box-advice" data-content-advice></div>
+        <!-- Zrób podmianke zdjecia na telefoniczne -->
+        <div class="content-box-bar"></div>
+        <div class="content-box-circle" data-content-button>
+          <img
+            class="content-box-circle-dice"
+            src="./images/icon-dice.svg"
+            alt="dice"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="./dist/theme.js"></script>
+    <script type="module" src="./dist/advice.js"></script>
+  </body>
+</html>

@@ -12,7 +12,7 @@ export const reset = (render, state) => {
             state.clearSecondNumber = false;
             state.canDelete = true;
             state.disabled = false;
-            render();
+            render(state);
         });
     }
 };

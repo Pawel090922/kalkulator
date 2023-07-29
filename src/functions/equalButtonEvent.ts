@@ -6,7 +6,7 @@ const equalButton: HTMLButtonElement | null = document.querySelector(
 
 export const equalButtonEvent = (
   state: State,
-  render: () => void,
+  render: (state: State) => void,
   equal: (state: State) => void
 ) => {
   if (equalButton) {
@@ -15,7 +15,7 @@ export const equalButtonEvent = (
         equal(state);
         state.isEqualed = true;
         state.clearSecondNumber = true;
-        render();
+        render(state);
       }
     });
   }

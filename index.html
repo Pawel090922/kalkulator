@@ -18,27 +18,101 @@
     <title>Strona Główna</title>
   </head>
   <body>
+    <aside class="nav-sidebar">
+      <button class="close-sidebar-button">
+        <i class="bx bx-x close-icon"></i>
+      </button>
+      <ul class="nav-sidebar-links">
+        <li class="sidebar-single-link">
+          <a class="button-page facebook" href="https://www.facebook.com/">
+            <i class="bx bxl-facebook-circle page-icon facebook-icon"></i>
+            <p class="page-name">Facebook</p>
+          </a>
+        </li>
+        <li class="sidebar-single-link">
+          <a
+            class="button-page instagram"
+            href="https://www.instagram.com/beetjuiceofficial/"
+          >
+            <i class="bx bxl-instagram-alt page-icon instagram-icon"></i>
+            <p class="page-name">Instagram</p>
+          </a>
+        </li>
+        <li class="sidebar-single-link">
+          <a class="button-page github" href="https://github.com/pawel090922">
+            <i class="bx bxl-github page-icon github-icon"></i>
+            <span class="page-name">Github</span>
+          </a>
+        </li>
+        <li class="sidebar-single-link">
+          <a
+            class="button-page youtube"
+            href="https://www.youtube.com/watch?v=EDrOriKrV3g"
+            ><i class="bx bxl-youtube page-icon youtube-icon"></i
+            ><span class="page-name">Youtube</span></a
+          >
+        </li>
+      </ul>
+    </aside>
     <header>
-      <nav>
-        <p class="Home">Strona Główna</p>
+      <nav class="navbar">
+        <div class="nav-menu-button">
+          <button class="menu-button">
+            <i class="bx bx-menu menu-icon"></i>
+          </button>
+        </div>
         <ul class="nav-links">
-          <li>
-            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          <li class="nav-single-link">
+            <a class="button-page facebook" href="https://www.facebook.com/">
+              <i class="bx bxl-facebook-circle page-icon facebook-icon"></i>
+              <p class="page-name">Facebook</p>
+            </a>
           </li>
-          <li>
-            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+          <li class="nav-single-link">
+            <a
+              class="button-page instagram"
+              href="https://www.instagram.com/beetjuiceofficial/"
+            >
+              <i class="bx bxl-instagram-alt page-icon instagram-icon"></i>
+              <p class="page-name">Instagram</p>
+            </a>
           </li>
-          <li>
-            <a href="#"><i class="bx bxl-github"></i></a>
+          <li class="nav-single-link">
+            <a class="button-page github" href="https://github.com/pawel090922">
+              <i class="bx bxl-github page-icon github-icon"></i>
+              <span class="page-name">Github</span>
+            </a>
           </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=EDrOriKrV3g"
-              ><i class="bx bxl-youtube"></i
-            ></a>
+          <li class="nav-single-link">
+            <a
+              class="button-page youtube"
+              href="https://www.youtube.com/watch?v=EDrOriKrV3g"
+              ><i class="bx bxl-youtube page-icon youtube-icon"></i
+              ><span class="page-name">Youtube</span></a
+            >
           </li>
         </ul>
+        <p class="nav-title">Strona</p>
+        <div class="theme">
+          <div class="box" data-button-change-theme>
+            <div class="circle"></div>
+          </div>
+        </div>
       </nav>
     </header>
-    <!-- <a href="./calculator.html">Kalkulator</a> -->
+    <main>
+      <section class="content">
+        <a href="./calculator.html" class="content-box">
+          <i class="bx bxs-calculator"></i>
+          <p class="content-box-text">Kalkulator</p>
+        </a>
+        <a href="./advice.html" class="content-box">
+          <i class="bx bx-bulb"></i>
+          <p class="content-box-text">Advice</p>
+        </a>
+      </section>
+    </main>
+    <script type="module" src="dist/main.js"></script>
+    <script src="dist/theme.js"></script>
   </body>
 </html>

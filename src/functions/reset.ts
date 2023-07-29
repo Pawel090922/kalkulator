@@ -3,7 +3,7 @@ import { State } from "../types/types";
 const resetButton: HTMLButtonElement | null =
   document.querySelector("[data-button-res]");
 
-export const reset = (render: () => void, state: State) => {
+export const reset = (render: (state: State) => void, state: State) => {
   if (resetButton) {
     resetButton.addEventListener("click", () => {
       state.output = "0";
@@ -16,7 +16,7 @@ export const reset = (render: () => void, state: State) => {
       state.clearSecondNumber = false;
       state.canDelete = true;
       state.disabled = false;
-      render();
+      render(state);
     });
   }
 };

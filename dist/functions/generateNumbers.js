@@ -40,7 +40,7 @@ export const generateNumbers = (render, state) => {
                     state.secondNumber = state.output;
                 }
                 state.canDelete = true;
-                render();
+                render(state);
             }
         });
     });

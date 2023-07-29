@@ -10,7 +10,7 @@ export const del = (render, state) => {
                         state.secondNumber = state.output;
                     }
                 }
-                render();
+                render(state);
             }
         });
     }
