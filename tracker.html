@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="./dist/styles/css/tracker.css" />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <h1 class="title">IP Address Tracker</h1>
+        <form action="" autocomplete="off" class="input-container">
+          <input
+            class="ip-input"
+            type="text"
+            placeholder="Search for any IP address or domain"
+            autofocus
+            required
+            data-ip-input
+          />
+          <button type="submit" class="button-ip-submit" data-ip-button>
+            <img src="images/icon-arrow.svg" alt="Submit Button" />
+          </button>
+        </form>
+        <div class="user-ip" data-get-ip>
+          Kliknij tutaj aby wpisać swój adres IP
+        </div>
+        <div class="info">
+          <div class="box ip-box">
+            <span class="field-name">ip address</span>
+            <span class="info-field" data-ip-output></span>
+          </div>
+          <div class="box location-box">
+            <span class="field-name">location</span>
+            <span class="info-field" data-location-output></span>
+          </div>
+          <div class="box time-box">
+            <span class="field-name">timezone</span>
+            <span class="info-field" data-time-output></span>
+          </div>
+          <div class="box isp-box">
+            <span class="field-name">isp</span>
+            <span class="info-field" data-isp-output></span>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </main>
+    <script type="module" src="./dist/tracker.js"></script>
+  </body>
+</html>

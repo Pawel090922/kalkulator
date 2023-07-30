@@ -1,16 +1,16 @@
 :root {
   touch-action: pan-x pan-y;
   height: 100%;
-  --background-color: #3d4a83;
-  --content-background-color: rgba(49, 58, 73);
-  --content-circle-background: rgba(82, 254, 171);
-  --advice-text-color: rgba(82, 254, 171);
-  --text-color: #ffffff;
+  --background-color: hsl(229, 36%, 38%);
+  --content-background-color: hsl(218, 20%, 24%);
+  --content-circle-background: hsl(151, 99%, 66%);
+  --advice-text-color: hsl(151, 99%, 66%)
+  --text-color: hsl(0, 0%, 100%);
   --button-horizontal-position: 0.2rem;
-  --arrow-background-color: #192041;
-  --change-theme-box-color: #192041;
-  --change-theme-circle-color: #d33c3c;
-  --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.253);
+  --arrow-background-color: hsl(230, 44%, 18%);
+  --change-theme-box-color: hsl(230, 44%, 18%);
+  --change-theme-circle-color: hsl(0, 63%, 53%);
+  --box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.253);
   --button-horizontal-position: 0.2rem;
   --transition: none;
 }
@@ -26,17 +26,16 @@
 }
 
 .light-mode {
-  --background-color: #cccccc;
-  --content-background-color: #bebebe;
-  --content-circle-background: #ff6000;
-  --advice-text-color: #ff6000;
-  --change-theme-box-color: #aaaaaa;
-  --arrow-background-color: #aaaaaa;
-  --content-circle-background: #ff6000;
-  --change-theme-circle-color: #ff6000;
-  --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.253);
+  --background-color: hsl(0, 0%, 80%);
+  --content-background-color: hsl(0, 0%, 75%);
+  --content-circle-background: hsl(23, 100%, 50%);
+  --advice-text-color: hsl(23, 100%, 50%);
+  --change-theme-box-color: hsl(0, 0%, 67%);
+  --arrow-background-color: hsl(0, 0%, 67%);
+  --content-circle-background: hsl(23, 100%, 50%);
+  --change-theme-circle-color: hsl(23, 100%, 50%);
   --button-horizontal-position: calc(100% - 1.5rem);
-  --text-color: #000000;
+  --text-color: hsl(0, 0%, 0%);
 }
 
 body {
