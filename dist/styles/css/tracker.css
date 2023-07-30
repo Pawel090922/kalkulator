@@ -41,6 +41,7 @@ body main .top {
   padding-top: 1rem;
   padding-bottom: 7rem;
   gap: 1rem;
+  box-shadow: var(--top-box-shadow);
 }
 body main .top .user-ip {
   text-decoration: underline;
